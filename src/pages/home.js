@@ -13,7 +13,7 @@ function Home() {
     const {toggleColorMode} = useColorMode();
     const topMessageColor = useColorModeValue('whiteAlpha.200', 'whiteAlpha.200')
     return(
-        <Container mt={20} p={0}>
+        <Container mt={{base: 10, md: 20}} p={{base: 6, md: 0}} minWidth={{md: "30%"}}>
             <Box borderRadius="lg" bg={topMessageColor} p={3} mb={6} mt={6} align="center" boxShadow="0 5px 4px rgba(0,0,0,.02), 0 5px 8px rgba(0,0,0,.03)">
                 Hey there, I'm a Software Development student based in Canada!
             </Box>
@@ -27,6 +27,7 @@ function Home() {
                 <Box 
                     flexShrink={0} 
                     mt={{base: 4, md: 0}} 
+                    ml={{md: 4}}
                     align="center"
                 >
                     <Image 
