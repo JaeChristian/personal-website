@@ -1,13 +1,21 @@
 import React from "react";
-import {Container, Box, Heading, Image, useColorMode, useColorModeValue, Button, Text} from "@chakra-ui/react"
+import {Container, Box, Heading, Image, useColorMode, useColorModeValue, Button, Text, List, ListItem, Link} from "@chakra-ui/react"
+import styled from "@emotion/styled";
 import ProfilePicture from "../res/profile.JPG";
+import ResLink from "../components/resource-link.js";
+const BioYear = styled.span`
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-weight: 700;
+    margin-right: 10px;
+`;
+
 function Home() {
     const {toggleColorMode} = useColorMode();
-    const topMessageColor = useColorModeValue('whiteAlpha.400', 'whiteAlpha.200')
+    const topMessageColor = useColorModeValue('whiteAlpha.200', 'whiteAlpha.200')
     return(
-        <Container mt={20}>
-            <Box borderRadius="lg" bg={topMessageColor} p={3} mb={6} mt={6} align="center">
-                Hello, I'm a Software Development student based in Canada!
+        <Container mt={20} p={0}>
+            <Box borderRadius="lg" bg={topMessageColor} p={3} mb={6} mt={6} align="center" boxShadow="0 5px 4px rgba(0,0,0,.02), 0 5px 8px rgba(0,0,0,.03)">
+                Hey there, I'm a Software Development student based in Canada!
             </Box>
             <Box display={{md: 'flex'}}>
                 <Box flexGrow={1}>
@@ -19,7 +27,6 @@ function Home() {
                 <Box 
                     flexShrink={0} 
                     mt={{base: 4, md: 0}} 
-                    ml={{md: 6}}
                     align="center"
                 >
                     <Image 
@@ -33,7 +40,61 @@ function Home() {
                         alt="profile image"
                     />
                 </Box>
-                {/* <Button onClick={toggleColorMode}> switch</Button> */}
+            </Box>
+            <Box display="flex" flexDir="column" gap={2} mt={6} >
+                <Heading fontSize="2xl" as="h2" fontWeight={700}>About Me</Heading>
+                <Text mt={2}>
+                    &nbsp; &nbsp;I am a software development student currently based in Calgary looking to become a full-stack developer.
+                    I have a passion for product development, and I am always on the lookout for cool new technologies that interest me! 
+                    I am currently working on a social media platform to help immigrants make connections and settle into Canada.
+                </Text>
+            </Box>
+            <Box display="flex" flexDir="column" gap={2} mt={6} >
+                <Heading fontSize="2xl" as="h2" fontWeight={700}>Skills</Heading>
+                <Box display={"flex"} gap={10}>
+                    <List styleType={"circle"} ml={4} display="flex" flexDirection="column">
+                        <ListItem>Java</ListItem>
+                        <ListItem>Javascript</ListItem>
+                        <ListItem>React</ListItem>
+                        <ListItem>Spring</ListItem>
+                    </List>
+                    <List styleType={"circle"} ml={4} display="flex" flexDirection="column">
+                        <ListItem>NodeJS</ListItem>
+                        <ListItem>CSS</ListItem>
+                        <ListItem>C#</ListItem>
+                        <ListItem>SQL</ListItem>
+                    </List>
+                </Box>
+            </Box>
+            <Box display="flex" flexDir="column" gap={2} mt={6} >
+                <Heading fontSize="2xl" as="h2" fontWeight={700}>Bio</Heading>
+                <Box>
+                    <Text mt={2}>
+                        <BioYear>2001</BioYear> 
+                        Born in Manila, Philippines.
+                    </Text>
+                    <Text>
+                        <BioYear>2007</BioYear> 
+                        Moved to Toronto, Ontario.
+                    </Text>
+                    <Text>
+                        <BioYear>2019</BioYear> 
+                        Graduated from Father Michael Goetz Secondary School.
+                    </Text>
+                    <Text>
+                        <BioYear>2020 to Present</BioYear> 
+                        Studying at the Southern Alberta Institute of Technology.
+                    </Text>
+                </Box>
+            </Box>
+            <Box display="flex" flexDir="column" gap={2} mt={6} >
+                <Heading fontSize="2xl" as="h2" fontWeight={700}>I ♥</Heading>
+                <Text mt={2}>
+                    &nbsp; &nbsp;Software development, <ResLink href="https://soundcloud.com/tourister/the-first-time-i-saw-you" text="music production"/>, playing instruments, and <ResLink href="https://www.youtube.com/watch?v=J6SwRfdPu_s&t=4s" text="video editing"/>.
+                </Text>
+            </Box>
+            <Box display="flex" justifyContent={"center"} p={8}>
+                <Text color="gray" fontSize="sm">Designed and built by Jeremiah Ortiz</Text>
             </Box>
         </Container>
     );

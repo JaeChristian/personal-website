@@ -16,7 +16,7 @@ import {HamburgerIcon, HumburgerIcon} from '@chakra-ui/icons'
 import Toggle from "./darkModeToggle.js";
 
 function Navbar(){
-    const bgColor = useColorModeValue('#ffffff40', '#20202380')
+    const bgColor = useColorModeValue('whiteAlpha.200', '#20202380')
     const bgColorComponents = useColorModeValue('#ffffff', '#202023')
     return(
     <Box
@@ -27,6 +27,7 @@ function Navbar(){
         bg={bgColor}
         style={{backdropFilter:'blur(10px)'}}
         zIndex={1}
+        boxShadow="0 5px 4px rgba(0,0,0,.02), 0 5px 8px rgba(0,0,0,.03)"
     >
         <Container 
             display="flex" 
@@ -37,7 +38,8 @@ function Navbar(){
             justifyContent="space-between"
         >
             <Flex mr={5}>
-                <Heading as="h1" size="lg" letterSpacing={'tighter'} fontSize='xl'>Jeremiah Ortiz</Heading>
+                <Link _hover={"none"} href="/"><Heading as="h1" size="lg" letterSpacing={'tighter'} fontSize='xl'>Jeremiah Ortiz</Heading></Link>
+                
             </Flex>
             <Stack 
             direction={{base: 'column', md: 'row'}}
@@ -46,8 +48,8 @@ function Navbar(){
             flexGrow={1}
             mt={{base: 4, nmd: 0}}
             >
-                <a href="#">Projects</a>
-                <a href="#">Posts</a>
+                <a href="/projects">Projects</a>
+                <a href="/highlights">Posts</a>
             </Stack>
 
             <Box flex={1} align="right">
@@ -61,8 +63,8 @@ function Navbar(){
                         aria-label="options"
                         />
                         <MenuList bg={bgColorComponents}>
-                            <MenuItem><a href="/">Projects</a></MenuItem>
-                            <MenuItem><a href="/">Works</a></MenuItem>
+                            <MenuItem><a href="/projects">Projects</a></MenuItem>
+                            <MenuItem><a href="/highlights">Highlights</a></MenuItem>
                         </MenuList> 
                     </Menu>
                 </Box>

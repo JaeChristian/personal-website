@@ -15,7 +15,7 @@ const config = {
 const theme = extendTheme({
     fonts: {
       heading: "'M PLUS Rounded 1c', sans-serif",
-      body: "M Plus Rounded 1c, sans-serif",
+    //   body: "'M Plus Rounded 1c', sans-serif",
     },
     config,
     styles
