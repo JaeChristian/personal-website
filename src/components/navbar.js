@@ -14,6 +14,12 @@ import {
 } from '@chakra-ui/react'
 import {HamburgerIcon, HumburgerIcon} from '@chakra-ui/icons'
 import Toggle from "./darkModeToggle.js";
+import styled from "@emotion/styled";
+
+const MenuLinks = styled.a`
+    width: 100%;
+    height: 100%;
+`;
 
 function Navbar(){
     const bgColor = useColorModeValue('whiteAlpha.200', '#20202380')
@@ -49,7 +55,7 @@ function Navbar(){
             mt={{base: 4, nmd: 0}}
             >
                 <a href="/projects">Projects</a>
-                <a href="/highlights">Posts</a>
+                <a href="/posts">Posts</a>
             </Stack>
 
             <Box flex={1} align="right">
@@ -63,8 +69,8 @@ function Navbar(){
                         aria-label="options"
                         />
                         <MenuList bg={bgColorComponents}>
-                            <MenuItem><a href="/projects">Projects</a></MenuItem>
-                            <MenuItem><a href="/highlights">Highlights</a></MenuItem>
+                            <MenuItem><MenuLinks href="/projects">Projects</MenuLinks></MenuItem>
+                            <MenuItem><MenuLinks href="/highlights">Posts</MenuLinks></MenuItem>
                         </MenuList> 
                     </Menu>
                 </Box>

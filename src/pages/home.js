@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {Container, Box, Heading, Image, useColorMode, useColorModeValue, Button, Text, List, ListItem, Link} from "@chakra-ui/react"
 import styled from "@emotion/styled";
 import ProfilePicture from "../res/profile.JPG";
@@ -9,14 +9,14 @@ const BioYear = styled.span`
     margin-right: 10px;
 `;
 
-function Home() {
-    const {toggleColorMode} = useColorMode();
-    const topMessageColor = useColorModeValue('whiteAlpha.200', 'whiteAlpha.200')
+function Home({setTextMessage}) {
+    const textMessage = "Hey there, I'm a Software Development student based in Canada!"
+    useEffect(()=>{
+        setTextMessage(textMessage);
+    },[]);
+    
     return(
-        <Container mt={{base: 10, md: 20}} p={{base: 6, md: 0}} minWidth={{md: "30%"}}>
-            <Box borderRadius="lg" bg={topMessageColor} p={3} mb={6} mt={6} align="center" boxShadow="0 5px 4px rgba(0,0,0,.02), 0 5px 8px rgba(0,0,0,.03)">
-                Hey there, I'm a Software Development student based in Canada!
-            </Box>
+        <Container p={{base: 6, md: 0}} pt={{base:0}} minWidth={{md: "container.sm"}}>
             <Box display={{md: 'flex'}}>
                 <Box flexGrow={1}>
                     <Heading fontSize='4xl' as="h2" variant="page-title" fontWeight={700}>
