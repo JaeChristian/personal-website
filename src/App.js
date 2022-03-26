@@ -11,6 +11,7 @@ import PageManager from "./components/page.js";
 import React from 'react';
 import {Box, useColorModeValue, Container} from "@chakra-ui/react";
 import {useState} from "react";
+import { AnimatePresence, motion } from 'framer-motion';
 
 function App() {
   const topMessageColor = useColorModeValue('whiteAlpha.200', 'whiteAlpha.200')
@@ -22,17 +23,18 @@ function App() {
       <Navbar setPage={setPage}/>
       <Container mt={{base: 20, md: 20}} p={{base: 6, md: 0}} pb={{base: 0}} pt={{base:0}} maxWidth={{md: "container.sm"}}>
         <Box borderRadius="lg" bg={topMessageColor} p={3} mb={6} align="center" boxShadow="0 5px 4px rgba(0,0,0,.02), 0 5px 8px rgba(0,0,0,.03)">
-                  {TextMessage}
+          <motion.div
+            key={TextMessage}
+            initial={{ y: -10, opacity: 0}}
+            animate={{ y: 0, opacity: 1}}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.25}}
+          >
+            {TextMessage}
+          </motion.div>
         </Box>
       </Container>
       <PageManager page={Page} setTextMessage={setTextMessage}/>
-      {/* <Router >
-        <Routes>
-          <Route exact path= "/" element={<Home setTextMessage={setTextMessage}/>}></Route>
-          <Route exact path= "/projects" element={<Projects setTextMessage={setTextMessage}/>}></Route>
-          <Route exact path="/posts" element={<Posts setTextMessage={setTextMessage}/>}></Route>
-        </Routes>
-      </Router> */}
     </ChakraProvider>
   );
 }
