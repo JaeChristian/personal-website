@@ -21,7 +21,7 @@ const MenuLinks = styled.a`
     height: 100%;
 `;
 
-function Navbar(){
+function Navbar({setPage}){
     const bgColor = useColorModeValue('whiteAlpha.200', '#20202380')
     const bgColorComponents = useColorModeValue('#ffffff', '#202023')
     return(
@@ -44,7 +44,7 @@ function Navbar(){
             justifyContent="space-between"
         >
             <Flex mr={5}>
-                <Link _hover={"none"} href="/"><Heading as="h1" size="lg" letterSpacing={'tighter'} fontSize='xl'>Jeremiah Ortiz</Heading></Link>
+                <Link _hover={"none"} href="javascript:void(0)"><Heading as="h1" size="lg" letterSpacing={'tighter'} fontSize='xl' onClick={()=>setPage("home")}>Jeremiah Ortiz</Heading></Link>
                 
             </Flex>
             <Stack 
@@ -54,8 +54,8 @@ function Navbar(){
             flexGrow={1}
             mt={{base: 4, nmd: 0}}
             >
-                <a href="/projects">Projects</a>
-                <a href="/posts">Posts</a>
+                <a href="javascript:void(0)" onClick={()=>setPage("projects")}>Projects</a>
+                <a href="javascript:void(0)" onClick={()=>setPage("posts")}>Posts</a>
             </Stack>
 
             <Box flex={1} align="right">
@@ -69,8 +69,9 @@ function Navbar(){
                         aria-label="options"
                         />
                         <MenuList bg={bgColorComponents}>
-                            <MenuItem><MenuLinks href="/projects">Projects</MenuLinks></MenuItem>
-                            <MenuItem><MenuLinks href="/highlights">Posts</MenuLinks></MenuItem>
+                            <MenuItem><MenuLinks href="javascript:void(0)" onClick={()=>setPage("home")}>Home</MenuLinks></MenuItem>
+                            <MenuItem><MenuLinks href="javascript:void(0)" onClick={()=>setPage("projects")}>Projects</MenuLinks></MenuItem>
+                            <MenuItem><MenuLinks href="javascript:void(0)" onClick={()=>setPage("posts")}>Posts</MenuLinks></MenuItem>
                         </MenuList> 
                     </Menu>
                 </Box>
