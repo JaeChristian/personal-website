@@ -13,7 +13,7 @@ const Section = ({children, delay = 0})=>{
     <AnimatedDiv
         initial={{y: 10, opacity: 0}}
         animate={{y: 0, opacity: 1}}
-        transition={{duration: 0.3, delay}}
+        transition={{duration: 0.5, delay}}
         exit={{opacity: 0}}
     >
         {children}
