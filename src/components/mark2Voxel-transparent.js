@@ -8,7 +8,7 @@ function easeOutCirc(x) {
   return Math.sqrt(1 - Math.pow(x - 1, 4))
 }
 
-const Mark2Voxel = () => {
+const Mark2VoxelTransparent = () => {
   const refContainer = useRef()
   const [loading, setLoading] = useState(true)
   const [renderer, setRenderer] = useState()
@@ -74,7 +74,7 @@ const Mark2Voxel = () => {
       controls.target = target
       setControls(controls)
 
-      loadGLTFModel(scene, './mark2-baked-opaque-2.glb', {
+      loadGLTFModel(scene, './mark2-baked-transparent-2.glb', {
         receiveShadow: false,
         castShadow: false
       }).then(() => {
@@ -126,4 +126,4 @@ const Mark2Voxel = () => {
   )
 }
 
-export default Mark2Voxel
+export default Mark2VoxelTransparent

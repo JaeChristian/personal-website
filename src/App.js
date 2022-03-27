@@ -13,7 +13,7 @@ import React from 'react';
 import {Box, useColorModeValue, Container} from "@chakra-ui/react";
 import {useState} from "react";
 import { AnimatePresence, motion } from 'framer-motion';
-import Mark2Voxel from "./components/mark2Voxel";
+import ModelSwitcher from "./components/modelSwitcher";
 
 function App() {
   const topMessageColor = useColorModeValue('whiteAlpha.200', 'whiteAlpha.200')
@@ -23,11 +23,7 @@ function App() {
   return (
     <ChakraProvider theme={theme}>
       <Navbar setPage={setPage}/>
-      <AnimatePresence>
-        <Section>
-        <Mark2Voxel/>
-        </Section>
-      </AnimatePresence>
+      <ModelSwitcher/>
       <Container mt={{base: 0, md: 10}} p={{base: 6, md: 0}} pb={{base: 0}} pt={{base:0}} maxWidth={{md: "container.sm"}} position="relative">
         <Box borderRadius="lg" bg={topMessageColor} p={3} mb={6} align="center" boxShadow="0 5px 4px rgba(0,0,0,.02), 0 5px 8px rgba(0,0,0,.03)">
           <motion.div

@@ -15,6 +15,7 @@ import {
 import {HamburgerIcon, HumburgerIcon} from '@chakra-ui/icons'
 import Toggle from "./darkModeToggle.js";
 import styled from "@emotion/styled";
+import Logo from "./logo";
 
 const MenuLinks = styled.a`
     width: 100%;
@@ -44,8 +45,7 @@ function Navbar({setPage}){
             justifyContent="space-between"
         >
             <Flex mr={5}>
-                <Link _hover={"none"} href="javascript:void(0)"><Heading as="h1" size="lg" letterSpacing={'tighter'} fontSize='xl' onClick={()=>setPage("home")}>Jeremiah Ortiz</Heading></Link>
-                
+                <Logo setPage={setPage}/>
             </Flex>
             <Stack 
             direction={{base: 'column', md: 'row'}}
@@ -53,11 +53,11 @@ function Navbar({setPage}){
             width={{base: 'full', md: 'auto'}}
             flexGrow={1}
             mt={{base: 4, nmd: 0}}
+            gap={1}
             >
                 <a href="javascript:void(0)" onClick={()=>setPage("projects")}>Projects</a>
                 <a href="javascript:void(0)" onClick={()=>setPage("posts")}>Posts</a>
             </Stack>
-
             <Box flex={1} align="right">
                 <Toggle/>
                 <Box ml={2} display={{base: 'inline-block', md:'none'}}>
