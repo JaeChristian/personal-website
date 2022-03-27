@@ -15,6 +15,7 @@ const Section = ({children, delay = 0})=>{
         animate={{y: 0, opacity: 1}}
         transition={{duration: 0.5, delay}}
         exit={{opacity: 0}}
+        position="relative"
     >
         {children}
     </AnimatedDiv>)

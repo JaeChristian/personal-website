@@ -7,6 +7,7 @@ import theme from "./libs/theme.js";
 import Navbar from "./components/navbar.js";
 import Projects from './pages/projects.js';
 import Posts from "./pages/posts.js";
+import Section from './components/sectionAnimation';
 import PageManager from "./components/page.js";
 import React from 'react';
 import {Box, useColorModeValue, Container} from "@chakra-ui/react";
@@ -22,8 +23,12 @@ function App() {
   return (
     <ChakraProvider theme={theme}>
       <Navbar setPage={setPage}/>
-      <Mark2Voxel/>
-      <Container mt={{base: 20, md: 20}} p={{base: 6, md: 0}} pb={{base: 0}} pt={{base:0}} maxWidth={{md: "container.sm"}}>
+      <AnimatePresence>
+        <Section>
+        <Mark2Voxel/>
+        </Section>
+      </AnimatePresence>
+      <Container mt={{base: 0, md: 10}} p={{base: 6, md: 0}} pb={{base: 0}} pt={{base:0}} maxWidth={{md: "container.sm"}} position="relative">
         <Box borderRadius="lg" bg={topMessageColor} p={3} mb={6} align="center" boxShadow="0 5px 4px rgba(0,0,0,.02), 0 5px 8px rgba(0,0,0,.03)">
           <motion.div
             key={TextMessage}
