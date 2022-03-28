@@ -5,6 +5,7 @@ import Temp from "../res/admin2.png";
 import NewcomersPlatform from "../res/newcomers-platform-2.png";
 import Thumbnail from "../components/thumbnail.js"
 import Section from "../components/sectionAnimation.js";
+import Project from "../components/project"
 
 function Projects({setTextMessage}) {
     const TextMessage = "Feel free to view some of my notable projects below!";
@@ -18,14 +19,14 @@ function Projects({setTextMessage}) {
                 <Box borderRad>
                     <Heading as="h2" fontWeight={700} fontSize="4xl">Projects</Heading>
                     <Stack direction={["column", "row"]} spacing={{base: 6, md: 45}} mt={[6]}>
-                        <Thumbnail 
+                        <Project 
                             src={NewcomersPlatform} 
                             alt="Newcomers Platform" 
                             heading="Newcomers Platform"
                             body="A social media platform to help connect recent immigrants to mentors and organizations, and help them settle into Canada."
                             delay={0.2}
                         />
-                        <Thumbnail 
+                        <Project 
                             src={HomenVentory} 
                             alt="Home Inventory" 
                             heading="Home nVentory"
