@@ -74,7 +74,7 @@ const Mark2VoxelTransparent = () => {
       controls.target = target
       setControls(controls)
 
-      loadGLTFModel(scene, './mark2-baked-transparent-2.glb', {
+      loadGLTFModel(scene, './mark2-baked-transparent.glb', {
         receiveShadow: false,
         castShadow: false
       }).then(() => {

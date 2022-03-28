@@ -5,8 +5,6 @@ import TransparentModel from "./mark2Voxel-transparent"
 import { Container, useColorModeValue } from "@chakra-ui/react"
 
 function ModelSwitcher(){
-    // const Opaque = useColorModeValue(false, true);
-    // console.log(Opaque);
     return(
         <AnimatePresence>
             <Section>
