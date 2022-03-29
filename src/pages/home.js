@@ -13,6 +13,7 @@ const BioYear = styled.span`
 
 function Home({setTextMessage}) {
     const textMessage = "Hey there, I'm a Software Development student based in Canada!"
+    const linksColor = useColorModeValue("teal.500", "teal.300")
     useEffect(()=>{
         setTextMessage(textMessage);
     },[]);
@@ -102,13 +103,10 @@ function Home({setTextMessage}) {
                 <Box display="flex" flexDir="column" gap={2} mt={6} >
                     <Heading fontSize="2xl" as="h2" fontWeight={700}>I ♥</Heading>
                     <Text mt={2}>
-                        &nbsp; &nbsp;Software development, <ResLink href="https://soundcloud.com/tourister/the-first-time-i-saw-you" text="music production"/>, playing instruments, and <ResLink href="https://www.youtube.com/watch?v=J6SwRfdPu_s&t=4s" text="video editing"/>.
+                        &nbsp; &nbsp;Software development, <ResLink href="https://soundcloud.com/tourister/the-first-time-i-saw-you" text="music production"/>, playing instruments, <ResLink href="https://www.youtube.com/watch?v=J6SwRfdPu_s&t=4s" text="video editing"/>, and classic Japanese cars.
                     </Text>
                 </Box>
             </Section>
-            <Box display="flex" justifyContent={"center"} p={8}>
-                <Text color="gray" fontSize="sm">Designed and built by Jeremiah Ortiz</Text>
-            </Box>
         </Container>
     );
 }

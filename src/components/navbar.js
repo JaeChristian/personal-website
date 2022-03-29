@@ -24,7 +24,7 @@ const MenuLinks = styled.a`
 
 function Navbar({setPage}){
     const bgColor = useColorModeValue('whiteAlpha.200', '#20202380')
-    const bgColorComponents = useColorModeValue('#ffffff', '#202023')
+    const bgColorComponents = useColorModeValue('#f0e7db', '#202023')
     return(
     <Box
         position="fixed"

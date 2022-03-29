@@ -13,7 +13,7 @@ const AnimatedLink = styled.a`
 function Thumbnail({src, alt, heading, body, delay}) {
     return(
         <Section delay={delay}>
-            <AnimatedLink href="#">
+            <AnimatedLink href="javascript:void(0)">
                 <Image 
                     maxW={["100%", "275px"]} 
                     src={src} 
