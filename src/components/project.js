@@ -1,7 +1,7 @@
 import Thumbnail from "./thumbnail"
 import Section from "./sectionAnimation"
 
-function Project({src, alt, heading, body, delay, onClick}) {
+function Project({src, alt, heading, body, delay, onClick, href}) {
     return(
         <button onClick={onClick}>
             <Thumbnail 
@@ -10,6 +10,7 @@ function Project({src, alt, heading, body, delay, onClick}) {
                 heading={heading}
                 body={body}
                 delay={delay}
+                href={href}
             />
         </button>
     )

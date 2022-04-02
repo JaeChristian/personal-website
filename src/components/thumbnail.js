@@ -10,10 +10,10 @@ const AnimatedLink = styled.a`
     align-items: center;
 `;
 
-function Thumbnail({src, alt, heading, body, delay}) {
+function Thumbnail({src, alt, heading, body, delay, href="javascript:void(0)"}) {
     return(
         <Section delay={delay}>
-            <AnimatedLink href="javascript:void(0)">
+            <AnimatedLink href={href}>
                 <Image 
                     maxW={["100%", "275px"]} 
                     src={src} 
@@ -23,7 +23,7 @@ function Thumbnail({src, alt, heading, body, delay}) {
                     className="thumbnail">
                 </Image>
                 <Heading align="center" mt={{base: 4, md: 4}} fontSize="2xl">{heading}</Heading>
-                <Text align="center" mt={{base: 2, md: 2}} fontSize="sm" maxWidth="100%">{body}</Text>
+                <Text align="center" mt={{base: 2, md: 2}} fontSize="sm" maxW={["100%", "275px"]}>{body}</Text>
             </AnimatedLink>
         </Section>
     );

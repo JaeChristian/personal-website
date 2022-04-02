@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import {Container, Box, Heading, Image, Stack, Text} from "@chakra-ui/react"
 import HomenVentory from "../res/admin.png";
+import EtchASketch from "../res/etchasketch.png";
 import NewcomersPlatform from "../res/newcomers-platform-2.png";
 import Thumbnail from "../components/thumbnail.js"
 import Section from "../components/sectionAnimation.js";
@@ -36,6 +37,18 @@ function Projects({setTextMessage, setPage}) {
                             delay={0.2}
                             modalTitle="Home nVentory"
                             onClick={()=>{setPage("projects.nventory")}}
+                        >
+                        </Project>
+                    </Stack>
+                    <Stack direction={["column", "row"]} spacing={{base: 6, md: 45}} mt={{base: 6, md: 10}} alignItems="center">
+                        <Project 
+                            src={EtchASketch} 
+                            alt="Etch-a-sketch" 
+                            heading="Etch-a-Sketch"
+                            body="A simple drawing website that lets you create and export pixel art in a 16x16 format."
+                            delay={0.2}
+                            modalTitle="Newcomers Platform"
+                            href="https://jeremiahortiz.ca/etch-a-sketch"
                         >
                         </Project>
                     </Stack>
