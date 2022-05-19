@@ -2,13 +2,15 @@ import {Container, Box, Text, Heading, Link, Image, List, ListItem, Span, chakra
 import Section from "../../components/sectionAnimation"
 import ResLink from "../../components/resource-link"
 import styled from "@emotion/styled"
-import FeedImage from "../../res/newcomers-platform.png"
-import LandingImage from "../../res/newcomers-platform-2.png"
+import HomeImage from "../../res/entries-home.png"
+import HomeLight from "../../res/entries-home-light.png"
+import LoginImage from "../../res/entries-login.png"
+
 import { ChakraProvider } from "@chakra-ui/provider"
 const Images = ({src, alt}) => {
     return(
     <Image 
-        maxW={["100%", "80%"]} 
+        maxW={{base: "100%", md:"90%"}} 
         src={src} 
         alt={alt} 
         boxShadow="0 5px 4px rgba(0,0,0,.06), 0 5px 8px rgba(0,0,0,.08)" 
@@ -23,42 +25,45 @@ const Highlight = ({children}) => {
     )
 }
 
-function NPlatform({setPage}) {
+function Entries({setPage}) {
     return(
     <Container p={{base: 6, md: 0}} pt={{base:0}} minWidth={{md: "container.sm"}}>
         <Section delay={0.1}>
             <Box display="flex" flexDir="column" gap={2} mt={6}>
                 <Box>
                     <Link color="#ff63c3" textUnderlineOffset={3} fontWeight={500} onClick={()=>setPage("projects")}>&lt; Back</Link>
-                    <Heading fontSize="2xl" as="h2" fontWeight={700}>Newcomers Platform</Heading>
+                    <Heading fontSize="2xl" as="h2" fontWeight={700}>Entries</Heading>
                 </Box>
                 <Text>
-                    &nbsp; &nbsp;One of the biggest struggles of being a recent immigrant is making connections with other people. Connections can get you friends, jobs, 
-                    and resources to help you settle into your new home. Newcomers Platform is a social media platform that aims to help recent immigrants with this exact problem. 
+                    &nbsp; &nbsp;For the past few months, I have been looking for an application that I could jot my thoughts and ideas on like a notebook. 
+                    I found that many of these applications were bloated with features and had unpleasing interfaces. So I thought to make a journal web app with the functionality and UI that I am looking for.
+
                 </Text>
                 <Text>
                     &nbsp; &nbsp;
-                    This platform allows users to connect to mentors, organizations, and institutions, who are offering to help recent immigrants with adjusting to Canada.
-                    To accomplish this, verified users can post about community events, job listings, and more!
+                    This is a full stack web app that currently has basic CRUD functionality. Users can create, edit, and delete entries, and have the ability to group entries into different tags.
+                    I am planning to keep the app as minimal as possible both design and feature wise, because clutter takes away from the experience. 
+                    Although in the future, I plan on implementing social features like allowing users to view other people's public entries. I also plan on making a mobile app using the same API.
                 </Text>
             </Box>
         </Section>
         <Section delay={0.2}>
             <Box mt={4} display="flex">
                 <List>
-                    <ListItem><Highlight>Link</Highlight> - Coming soon</ListItem>
+                    <ListItem><Highlight>Link</Highlight> - Not yet deployed</ListItem>
                     <ListItem><Highlight>Platform</Highlight> - Website</ListItem>
-                    <ListItem><Highlight>Stack</Highlight> - React, Spring Boot, MongoDB</ListItem>
+                    <ListItem><Highlight>Stack</Highlight> - React, NodeJS, MongoDB</ListItem>
                 </List>
             </Box>
         </Section>
         <Section delay={0.3}>
             <Box mt={6} display="flex" flexDir="column" gap={4} alignItems="center">
-                <Images src={LandingImage} alt="Landing page"/>
-                <Images src={FeedImage} alt="Home page"/>
+                <Images src={HomeImage} alt="Home Page Dark"/>
+                <Images src={HomeLight} alt="Home page"/>
+                <Images src={LoginImage} alt="Login page"/>
             </Box>
         </Section>
     </Container>
     )
 }
-export default NPlatform
+export default Entries

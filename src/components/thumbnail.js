@@ -16,6 +16,7 @@ function Thumbnail({src, alt, heading, body, delay, href="javascript:void(0)"}) 
             <AnimatedLink href={href}>
                 <Image 
                     maxW={["100%", "275px"]} 
+                    h="140px"
                     src={src} 
                     alt={alt} 
                     boxShadow="0 5px 4px rgba(0,0,0,.06), 0 5px 8px rgba(0,0,0,.08)" 

@@ -4,6 +4,7 @@ import Posts from "../pages/posts";
 import Projects from "../pages/projects";
 import NPlatform from "../pages/projects/nplatform"
 import Nventory from "../pages/projects/nventory"
+import Entries from "../pages/projects/entries"
 
 import { AnimatePresence, motion} from "framer-motion";
 
@@ -36,6 +37,12 @@ function Page({Page, setPage, setTextMessage}){
         return(
             <AnimatePresence exitBeforeEnter initial={true}>
                 <Nventory setTextMessage={setTextMessage} setPage={setPage}/>
+            </AnimatePresence>
+        );
+    } else if(Page==="projects.entries") {
+        return(
+            <AnimatePresence exitBeforeEnter initial={true}>
+                <Entries setTextMessage={setTextMessage} setPage={setPage}/>
             </AnimatePresence>
         );
     }

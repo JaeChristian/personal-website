@@ -103,7 +103,7 @@ function Home({setTextMessage}) {
                 <Box display="flex" flexDir="column" gap={2} mt={6} >
                     <Heading fontSize="2xl" as="h2" fontWeight={700}>I ♥</Heading>
                     <Text mt={2}>
-                        &nbsp; &nbsp;Software development, <ResLink href="https://soundcloud.com/tourister/the-first-time-i-saw-you" text="music production"/>, playing instruments, <ResLink href="https://www.youtube.com/watch?v=J6SwRfdPu_s&t=4s" text="video editing"/>, and classic Japanese cars.
+                        &nbsp; &nbsp;Software development, music production, playing instruments, and <ResLink href="https://www.youtube.com/watch?v=J6SwRfdPu_s&t=4s" text="video editing"/>.
                     </Text>
                 </Box>
             </Section>
