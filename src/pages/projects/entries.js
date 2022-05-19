@@ -36,12 +36,13 @@ function Entries({setPage}) {
                 </Box>
                 <Text>
                     &nbsp; &nbsp;For the past few months, I have been looking for an application that I could jot my thoughts and ideas on like a notebook. 
-                    I found that many of these applications were bloated with features and had unpleasing interfaces. So I thought to make a journal web app with the functionality and UI that I am looking for.
+                    I found that many of these applications were bloated with features and had unpleasing interfaces. 
+                    So I thought to make a journal web app with the functionality and UI that I was looking for.
 
                 </Text>
                 <Text>
                     &nbsp; &nbsp;
-                    This is a full stack web app that currently has basic CRUD functionality. Users can create, edit, and delete entries, and have the ability to group entries into different tags.
+                    Entries currently has basic CRUD functionality. Users can create, edit, and delete entries, and have the ability to group entries into different tags.
                     I am planning to keep the app as minimal as possible both design and feature wise, because clutter takes away from the experience. 
                     Although in the future, I plan on implementing social features like allowing users to view other people's public entries. I also plan on making a mobile app using the same API.
                 </Text>
@@ -50,7 +51,7 @@ function Entries({setPage}) {
         <Section delay={0.2}>
             <Box mt={4} display="flex">
                 <List>
-                    <ListItem><Highlight>Link</Highlight> - Not yet deployed</ListItem>
+                    <ListItem><Highlight>Link</Highlight> - <Link color="#ff63c3" textUnderlineOffset={3} fontWeight={500} href="https://github.com/JaeChristian/entries"/></ListItem>
                     <ListItem><Highlight>Platform</Highlight> - Website</ListItem>
                     <ListItem><Highlight>Stack</Highlight> - React, NodeJS, MongoDB</ListItem>
                 </List>
