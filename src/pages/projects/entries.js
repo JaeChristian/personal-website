@@ -42,16 +42,16 @@ function Entries({setPage}) {
                 </Text>
                 <Text>
                     &nbsp; &nbsp;
-                    Entries currently has basic CRUD functionality. Users can create, edit, and delete entries, and have the ability to group entries into different tags.
-                    I am planning to keep the app as minimal as possible both design and feature wise, because clutter takes away from the experience. 
-                    Although in the future, I plan on implementing social features like allowing users to view other people's public entries. I also plan on making a mobile app using the same API.
+                    Entries is a journaling app that focuses on simplicity and minimalism, because clutter and bloated features ruin the user experience.
+                    Currently, it has basic CRUD functionality; users can create, edit, and delete entries, and have the ability to group entries into different tags.
+                    In the future, I plan on implementing social features like allowing users to view other people's public entries. I also plan on making a mobile app using React Native.
                 </Text>
             </Box>
         </Section>
         <Section delay={0.2}>
             <Box mt={4} display="flex">
                 <List>
-                    <ListItem><Highlight>Link</Highlight> - <Link color="#ff63c3" textUnderlineOffset={3} fontWeight={500} href="https://github.com/JaeChristian/entries"/></ListItem>
+                    <ListItem><Highlight>Link</Highlight> - <Link color="#ff63c3" textUnderlineOffset={3} fontWeight={500} target="_blank" href="https://github.com/JaeChristian/entries">GitHub</Link></ListItem>
                     <ListItem><Highlight>Platform</Highlight> - Website</ListItem>
                     <ListItem><Highlight>Stack</Highlight> - React, NodeJS, MongoDB</ListItem>
                 </List>
