@@ -51,7 +51,7 @@ function Entries({setPage}) {
         <Section delay={0.2}>
             <Box mt={4} display="flex">
                 <List>
-                    <ListItem><Highlight>Link</Highlight> - <Link color="#ff63c3" textUnderlineOffset={3} fontWeight={500} target="_blank" href="https://github.com/JaeChristian/entries">GitHub</Link></ListItem>
+                    <ListItem><Highlight>Link</Highlight> - <Link color="#ff63c3" textUnderlineOffset={3} fontWeight={500} target="_blank" href="https://jovial-marshmallow-e9b3d7.netlify.app/">Netlify</Link></ListItem>
                     <ListItem><Highlight>Platform</Highlight> - Website</ListItem>
                     <ListItem><Highlight>Stack</Highlight> - React, NodeJS, MongoDB</ListItem>
                 </List>
