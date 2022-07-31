@@ -51,9 +51,9 @@ function Home({setTextMessage}) {
                 <Box display="flex" flexDir="column" gap={2} mt={6} >
                     <Heading fontSize="2xl" as="h2" fontWeight={700}>About Me</Heading>
                     <Text mt={2}>
-                        &nbsp; &nbsp;I am a software development student currently based in Calgary looking to become a full-stack developer.
+                        &nbsp; &nbsp;I am a recent software development graduate currently based in Canada looking to become a full-stack developer.
                         I have a passion for product development, and I am always on the lookout for cool new technologies that interest me! 
-                        I am currently working on a social media platform to help immigrants make connections and settle into Canada.
+                        I am currently working on Entries - a writing web app that focuses on simplicity and UX.
                     </Text>
                 </Box>
             </Section>
@@ -93,8 +93,8 @@ function Home({setTextMessage}) {
                             Graduated from Father Michael Goetz Secondary School.
                         </Text>
                         <Text>
-                            <BioYear>2020 to Present</BioYear> 
-                            Studying at the Southern Alberta Institute of Technology.
+                            <BioYear>2022</BioYear> 
+                            Graduated from the Southern Alberta Institute of Technology.
                         </Text>
                     </Box>
                 </Box>
