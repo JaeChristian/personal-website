@@ -56,7 +56,7 @@ function Navbar({setPage}){
             gap={1}
             >
                 <a href="javascript:void(0)" onClick={()=>setPage("projects")}>Projects</a>
-                <a href="javascript:void(0)" onClick={()=>setPage("posts")}>Posts</a>
+                {/* <a href="javascript:void(0)" onClick={()=>setPage("posts")}>Posts</a> */}
             </Stack>
             <Box flex={1} align="right">
                 <Toggle/>
@@ -71,7 +71,7 @@ function Navbar({setPage}){
                         <MenuList bg={bgColorComponents}>
                             <MenuItem><MenuLinks href="javascript:void(0)" onClick={()=>setPage("home")}>Home</MenuLinks></MenuItem>
                             <MenuItem><MenuLinks href="javascript:void(0)" onClick={()=>setPage("projects")}>Projects</MenuLinks></MenuItem>
-                            <MenuItem><MenuLinks href="javascript:void(0)" onClick={()=>setPage("posts")}>Posts</MenuLinks></MenuItem>
+                            {/* <MenuItem><MenuLinks href="javascript:void(0)" onClick={()=>setPage("posts")}>Posts</MenuLinks></MenuItem> */}
                         </MenuList> 
                     </Menu>
                 </Box>

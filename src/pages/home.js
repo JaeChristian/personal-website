@@ -12,7 +12,7 @@ const BioYear = styled.span`
 `;
 
 function Home({setTextMessage}) {
-    const textMessage = "Hey there, I'm a Software Development student based in Canada!"
+    const textMessage = "Hey there, I'm a Jr. Software Developer based in Canada!"
     const linksColor = useColorModeValue("teal.500", "teal.300")
     useEffect(()=>{
         setTextMessage(textMessage);
@@ -26,7 +26,7 @@ function Home({setTextMessage}) {
                         <Heading fontSize='4xl' as="h2" variant="page-title" fontWeight={700}>
                             Jeremiah Ortiz
                         </Heading>
-                        <Text>Software Developer ( Developer / Producer / Video Editor )</Text>
+                        <Text>Jr. Software Developer</Text>
                     </Box>
                     <Box 
                         flexShrink={0} 
@@ -62,16 +62,18 @@ function Home({setTextMessage}) {
                     <Heading fontSize="2xl" as="h2" fontWeight={700}>Skills</Heading>
                     <Box display={"flex"} gap={10}>
                         <List styleType={"circle"} ml={4} display="flex" flexDirection="column">
-                            <ListItem>Java</ListItem>
-                            <ListItem>Javascript</ListItem>
                             <ListItem>React</ListItem>
-                            <ListItem>Spring</ListItem>
+                            <ListItem>Node.js</ListItem>
+                            <ListItem>Spring Boot</ListItem>
+                            <ListItem>REST APIs</ListItem>
+                            <ListItem>Java</ListItem>
                         </List>
                         <List styleType={"circle"} ml={4} display="flex" flexDirection="column">
-                            <ListItem>NodeJS</ListItem>
+                            <ListItem>Javascript</ListItem>
+                            <ListItem>HTML5</ListItem>
                             <ListItem>CSS</ListItem>
-                            <ListItem>C#</ListItem>
-                            <ListItem>SQL</ListItem>
+                            <ListItem>SQL (PostgreSQL / MySQL)</ListItem>
+                            <ListItem>NoSQL (MongoDB)</ListItem>
                         </List>
                     </Box>
                 </Box>

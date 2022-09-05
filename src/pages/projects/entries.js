@@ -32,14 +32,17 @@ function Entries({setPage}) {
             <Box display="flex" flexDir="column" gap={2} mt={6}>
                 <Box>
                     <Link color="#ff63c3" textUnderlineOffset={3} fontWeight={500} onClick={()=>setPage("projects")}>&lt; Back</Link>
-                    <Heading fontSize="2xl" as="h2" fontWeight={700}>Entries</Heading>
+                    <Heading fontSize="3xl" as="h2" fontWeight={700}>Entries</Heading>
                 </Box>
+                <Heading fontSize = "xl" as="h3" fontWeight={700}>Background</Heading>
                 <Text>
-                    &nbsp; &nbsp;For the past few months, I have been looking for an application that I could jot my thoughts and ideas on like a notebook. 
-                    I found that many of these applications were bloated with features and had unpleasing interfaces. 
-                    So I thought to make a journal web app with the functionality and UI that I was looking for.
+                    &nbsp; &nbsp;A few months ago, I started to get into the idea of journalling. I wanted to write my journals on an app rather than on a physical notebook so I took my search to the app store. 
+                    However, I found that many of these journalling applications were bloated with unneeded features and had unpleasing interfaces. 
+                    So instead of continuing my search, I thought of making my own web app as a fun side project that I would actually use.
+
 
                 </Text>
+                <Heading fontSize = "xl" as="h3" fontWeight={700}>About</Heading>
                 <Text>
                     &nbsp; &nbsp;
                     Entries is a journaling app that focuses on simplicity and minimalism, because clutter and bloated features ruin the user experience.

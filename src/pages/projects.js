@@ -49,6 +49,7 @@ function Projects({setTextMessage, setPage}) {
                             delay={0.2}
                             modalTitle="Newcomers Platform"
                             href="https://jeremiahortiz.ca/etch-a-sketch"
+                            target="_blank"
                         >
                         </Project>
                         <Project 
